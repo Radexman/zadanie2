@@ -1,0 +1,10 @@
+services:
+    raport:
+        build: .
+        container_name: raport_ocen
+        volumes:
+            - ./data:/data
+            - ./out:/out
+        environment:
+            - CSV_PATH=/data/oceny.csv
+            - OUT_DIR=/out
